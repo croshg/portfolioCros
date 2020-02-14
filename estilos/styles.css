@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;}
+
+@font-face { 
+    font-family: "friday-stroke";
+    src: url("../fonts/Friday-Stroke.otf");}
+ @font-face  { 
+    font-family: "typewriter";
+    src: url("../fonts/JMH-Typewriter-dry-Thin.otf");
+        }
+
+        @font-face  { 
+            font-family: "bella";
+            src: url("../fonts/Bella\ Donna\ Personal\ Use.ttf Donna\ Personal\ Use.ttf");
+                }
+        
+@font-face  { 
+            font-family: "Oswald";
+            src: url("../fonts/Oswald-Bold.ttf");
+                }
+@font-face  { 
+            font-family: "Dollie";
+                    src: url("../fonts/DollieScript_PersonalUse.ttf");
+                        }
+
+
+body {
+    background-color: #3C408A;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Oswald"; 
+    font-size: 2rem;
+    text-align: center;
+}
+
+header{ width: 100%;
+       
+     text-align: center;
+}
+
+
+nav {
+        color: azure;
+        width: 100%;
+        margin: 50px;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+    
+}
+nav li{
+   
+    list-style: none;
+    display: inline-block;
+    padding: 4px 50px;
+    
+}
+.portada { width:100%}
+/* #3D863B  */
+
+/*ESTILOS A CLASES ABSOLUTAS*/
+a {
+    color: inherit; text-decoration: none;
+} 
+a:hover{ 
+    
+    text-decoration: underline;
+}
+h1 {
+    color: #F5C64C;
+    font-size: 200px; }
+
+h2 { 
+    color: #FFA4B2;
+    font-size: 50px;
+    line-height: 0.9;}
+
+    /* - - - - - - - - - - */
+
+.fake {
+        z-index: 10; 
+        width: 100px;
+        height: 100px;
+        position: relative;
+        -webkit-animation-name: boton; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+        animation-name: boton;
+        animation-duration: 6s;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+}
+      
+      
+      /* Safari 4.0 - 8.0 */
+      @-webkit-keyframes boton {
+        0%   { left:0px; top:0px;}
+        25%  { left:900px; top:0px;}
+        50%  { left:900px; top:1000px;}
+        75%  { left:0px; top:1000px;}
+        100% { left:0px; top:0px;}
+      }
+      
+      /* Standard syntax */
+      @keyframes boton{
+        0%   {left:0px; top:0px;}
+        25%  { left:900px; top:0px;}
+        50%  { left:900px; top:1000px;}
+        75%  { left:0px; top:1000px;}
+        100% { left:0px; top:0px;}
+      }
+
+.but {width: 6.2em; height: 6em;
+}
+
+section {
+        margin: 8px ;
+        padding: 10px;
+        position: relative;
+        width: 100%; 
+        
+}
+
+
+
+.padre1 {display: flex; flex-direction: row; flex-wrap: wrap-reverse; justify-content: space-between; }
+.padre2 {display: flex; justify-content: center;}
+
+#design, #art {margin: 20px 100px 0px 0px; border:1px solid black;}
+.fondoMesa{ width: 100% ; height: 70px; margin: 0 auto; z-index: -2; background-color:#5D3D42; 
+position: absolute; bottom: -10px; right: 9px;
+
+}
+
+/* #design {
+    position: absolute;
+        bottom: -20px;
+        right: 37% ;
+    }
+
+#art {
+        position: absolute;
+        bottom: -20px; 
+        left: 10%;
+} */
+
+#cases:hover, #projects:hover, #design:hover, #art:hover { transform: scale(1.1) ; }
+
+
+footer { 
+        margin:0px;
+        width: 100%;
+        height: 250px;
+        background-color: #5D3D42;
+        font-size: 30px;
+        text-align: center;
+    }
+    footer div {position: relative;
+        bottom: 20px;} 
+
+.mesa {
+   
+    display: flex; flex-direction: row;
+    justify-content: space-around;
+        
+}
+.mesa p{ margin: 0px 30px;color: aliceblue;padding-top: 5%;}
+.mesa img{ margin:70px 25px; }
+.mesa img:hover{transform: scale(2,2);}
+
+/*.icono {
+    width: 1cm;
+        height: 1cm;
+    } */
+    
+
+/*ESTILOS PARA LA PÁGINA ABOUT ME */
+
+.CV {font-family: "typewriter";
+    margin:0 auto;
+}
+.CV p{color: aliceblue;
+
+    padding-top: 5%;
+    text-align: justify;}
+
+.grid-container {
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 20px;
+}
+.grid-container > div {
+
+    text-align: left;
+    padding: 20px ;
+    font-size: 30px;
+  }
+
+
+.centro { color: #3C408A;}
+.item-centro {background-color: #F5C64C;box-shadow: 3px 3px 10px 2px whitesmoke;text-align: left;}
+.botonbBack { font-size: 3em; float: left;
+}
+
+/* .titulo {color: #F5C64C;
+            font-size: 1rem;}
+p { width: 300px; height: 300px;
+    color: #FFA4B2;} */
+
+/*MEDIA QUERYS DE RESPONSIVE DESIGN*/
+
+
+@media screen  and (max-width: 992px){
+    
+    .fake  { display: none;}
+    .padre1 { justify-content: center;}
+    .padre1 div { margin:15px}
+    .padre2{ flex-direction: column;}
+    .fondoMesa{ height: 350px;}
+   .mesa{ flex-direction: column;}
+  }
+
+@media screen  and (max-width: 1020px){
+    .grid-container{ display: flex; flex-direction: column;flex-wrap: wrap;}
+
+}
